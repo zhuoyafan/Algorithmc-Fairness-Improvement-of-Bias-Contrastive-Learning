@@ -1,6 +1,6 @@
-# Algorithmc Fairness Improvement of Bias-Contrastive Learning
+# Algorithmic Fairness Improvement of Bias-Contrastive Learning
 
-The code mainly builds on [the official pytorch implementation](https://github.com/mqraitem/Bias-Mimicking) of [Bias Mimicking: A simple sampling approach for Bias Mitigation](https://arxiv.org/pdf/2209.15605.pdf) with some small changes.
+The code mainly builds on [the official pytorch implementation](https://github.com/mqraitem/Bias-Mimicking) of [Bias Mimicking: A simple sampling approach for Bias Mitigation](https://arxiv.org/pdf/2209.15605.pdf) with some small changes. Our changes include two aspects. First, we add anchor sampling module in the [bias-contrastive learning](https://github.com/grayhong/bias-contrastive-learning) framework. Second, we test the algorithmic fairness influence of different data augmentation methods in the bias-contrastive learning framework.
 
 ## Setup
 
