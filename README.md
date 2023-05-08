@@ -1,13 +1,13 @@
-# Bias Mimicking: A simple sampling approach for Bias Mitigation 
+# Algorithmc Fairness Improvement of Bias-Contrastive Learning
 
-Official Pytorch implementation of [Bias Mimicking: A simple sampling approach for Bias Mitigation](https://arxiv.org/pdf/2209.15605.pdf). 
+The code mainly builds on [the pytorch implementation](https://github.com/mqraitem/Bias-Mimicking) of [Bias Mimicking: A simple sampling approach for Bias Mitigation](https://arxiv.org/pdf/2209.15605.pdf) with some small changes.
 
 ## Setup
 
 ### Set up conda environment  
 ```
-conda create -n bias_mimicking python=3.8
-conda activate bias_mimicking
+conda create -n xx python=3.8
+conda activate xx
 ```
 
 ### Install packages
@@ -29,21 +29,14 @@ Download [UTKFace](https://susanqq.github.io/UTKFace/) dataset under `data/utk_f
 Download [CIFAR10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset under `data/cifar10`
 
 
-As discussed in the paper, we train on subsampled versions of CelebA and UTKFace. The information required to reproduce the the splits are in data/[DATASET]/pickles. The code will automatically load the right splits. 
-
 ## Train.
 
 From the main directory, run: 
 
 ```
-python train_[DATASET]/train_[DATASET]_[METHOD].py --seed [SEED]
+python train_[DATASET]/train_[DATASET]_[METHOD].py --exp_name [EXP_NAME] --task [TASK] --seed [SEED] 
 ```
 
-To train our method on celeba, run: 
-
-```
-python train_celeba/train_celeba_bm.py --mode [none/us/uw/os] --seed [SEED]
-```
 
 where mode refers to whether the distribution is left as is/undersampled/upweighted/oversampled when training the predictive linear layer. 
 
