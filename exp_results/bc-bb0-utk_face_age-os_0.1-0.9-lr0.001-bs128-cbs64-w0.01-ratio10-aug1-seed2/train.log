@@ -1,0 +1,289 @@
+Log level set to: INFO
+Set seed: 2
+=======> Using Fixed Random Seed: 2 <========
+save_path: exp_results/bc-bb0-utk_face_age-os_0.1-0.9-lr0.001-bs128-cbs64-w0.01-ratio10-aug1-seed2
+get_utk_face - split: train, aug: False, given_y: True, ratio: 0
+use existing biased_utk_face from data/utk_face/pickles/biased_utk_face-target_gender-bias_age-0.9
+Distribution Before Sampling: 
+===================================
+Binary Labels Distribution: 
+Binary Target 0
+---------------------------
+Target 0: [8237, 147]
+Target 1: [823, 1477]
+Binary Target 1
+---------------------------
+Target 0: [8237, 147]
+Target 1: [823, 1477]
+===================================
+Normal Label Distribution: 
+Target 0: [8237, 147]
+Target 1: [823, 1477]
+===================================
+Distribution After Sampling: 
+===================================
+Binary Labels Distribution: 
+Binary Target 0
+---------------------------
+Target 0: [823, 823]
+Target 1: [823, 823]
+Binary Target 1
+---------------------------
+Target 0: [823, 823]
+Target 1: [823, 823]
+===================================
+Normal Label Distribution: 
+Target 0: [823, 823]
+Target 1: [823, 823]
+===================================
+Use BiasedUTKFace - target_attr: gender
+BiasedUTKFace -- total: 3292, target_attr: gender, bias_attr: age bias_rate: 0.9
+['[train] target_0-bias_0: 823', '[train] target_0-bias_1: 823', '[train] target_1-bias_0: 823', '[train] target_1-bias_1: 823']
+confusion_matrix - 
+ original: tensor([[823., 823.],
+        [823., 823.]]), 
+ normalized: tensor([[0.500, 0.500],
+        [0.500, 0.500]]), 
+ b|y: tensor([[0.500, 0.500],
+        [0.500, 0.500]])
+get_utk_face - split: train, aug: 1, given_y: True, ratio: 10
+use existing biased_utk_face from data/utk_face/pickles/biased_utk_face-target_gender-bias_age-0.9
+Distribution Before Sampling: 
+===================================
+Binary Labels Distribution: 
+Binary Target 0
+---------------------------
+Target 0: [8237, 147]
+Target 1: [823, 1477]
+Binary Target 1
+---------------------------
+Target 0: [8237, 147]
+Target 1: [823, 1477]
+===================================
+Normal Label Distribution: 
+Target 0: [8237, 147]
+Target 1: [823, 1477]
+===================================
+Distribution After Sampling: 
+===================================
+Binary Labels Distribution: 
+Binary Target 0
+---------------------------
+Target 0: [823, 823]
+Target 1: [823, 823]
+Binary Target 1
+---------------------------
+Target 0: [823, 823]
+Target 1: [823, 823]
+===================================
+Normal Label Distribution: 
+Target 0: [823, 823]
+Target 1: [823, 823]
+===================================
+Use BiasedUTKFace - target_attr: gender
+BiasedUTKFace -- total: 3292, target_attr: gender, bias_attr: age bias_rate: 0.9
+['[train] target_0-bias_0: 823', '[train] target_0-bias_1: 823', '[train] target_1-bias_0: 823', '[train] target_1-bias_1: 823']
+get_utk_face - split: valid, aug: False, given_y: True, ratio: 0
+use existing biased_utk_face from data/utk_face/pickles/biased_utk_face-target_gender-bias_age-0.9
+Distribution Before Sampling: 
+===================================
+Binary Labels Distribution: 
+Binary Target 0
+---------------------------
+Target 0: [1030, 195]
+Target 1: [841, 202]
+Binary Target 1
+---------------------------
+Target 0: [1030, 195]
+Target 1: [841, 202]
+===================================
+Normal Label Distribution: 
+Target 0: [1030, 195]
+Target 1: [841, 202]
+===================================
+Use BiasedUTKFace - target_attr: gender
+BiasedUTKFace -- total: 2268, target_attr: gender, bias_attr: age bias_rate: 0.9
+['[valid] target_0-bias_0: 1030', '[valid] target_0-bias_1: 195', '[valid] target_1-bias_0: 841', '[valid] target_1-bias_1: 202']
+get_utk_face - split: test, aug: False, given_y: True, ratio: 0
+use existing biased_utk_face from data/utk_face/pickles/biased_utk_face-target_gender-bias_age-0.9
+Distribution Before Sampling: 
+===================================
+Binary Labels Distribution: 
+Binary Target 0
+---------------------------
+Target 0: [1061, 176]
+Target 1: [867, 165]
+Binary Target 1
+---------------------------
+Target 0: [1061, 176]
+Target 1: [867, 165]
+===================================
+Normal Label Distribution: 
+Target 0: [1061, 176]
+Target 1: [867, 165]
+===================================
+Use BiasedUTKFace - target_attr: gender
+BiasedUTKFace -- total: 2269, target_attr: gender, bias_attr: age bias_rate: 0.9
+['[test] target_0-bias_0: 1061', '[test] target_0-bias_1: 176', '[test] target_1-bias_0: 867', '[test] target_1-bias_1: 165']
+decay_epochs: [6, 13]
+[1 / 20] Learning rate: 0.001 weight: 0.01
+[1 / 20] Loss: 5.094743522954595 CE Loss: 0.7120608501996334 Con Loss: 5.087622910774203
+[1 / 20] tensor([[0.914, 0.801],
+        [0.330, 0.412]]) {'epoch': 1, 'valid/acc': 64.109, 'valid/acc_unbiased': 59.777, 'valid/diff': 11.701, 'valid/acc_skew': 62.829, 'valid/acc_align': 56.725, 'test/acc': 64.566, 'test/acc_unbiased': 61.434, 'test/diff': 9.767, 'test/acc_skew': 62.205, 'test/acc_align': 60.663}
+[1 / 20] best valid accuracy: 59.777 at epoch 1 
+ best_stats: {'best_valid_epoch': 1, 'best_valid_valid/acc': 64.109, 'best_valid_valid/acc_unbiased': 59.777, 'best_valid_valid/diff': 11.701, 'best_valid_valid/acc_skew': 62.829, 'best_valid_valid/acc_align': 56.725, 'best_valid_test/acc': 64.566, 'best_valid_test/acc_unbiased': 61.434, 'best_valid_test/diff': 9.767, 'best_valid_test/acc_skew': 62.205, 'best_valid_test/acc_align': 60.663}
+[1 / 20] best test accuracy: 61.434 at epoch 1 
+ best_stats: {'best_test_epoch': 1, 'best_test_valid/acc': 64.109, 'best_test_valid/acc_unbiased': 59.777, 'best_test_valid/diff': 11.701, 'best_test_valid/acc_skew': 62.829, 'best_test_valid/acc_align': 56.725, 'best_test_test/acc': 64.566, 'best_test_test/acc_unbiased': 61.434, 'best_test_test/diff': 9.767, 'best_test_test/acc_skew': 62.205, 'best_test_test/acc_align': 60.663}
+[2 / 20] Learning rate: 0.001 weight: 0.01
+[2 / 20] Loss: 4.844834683442608 CE Loss: 0.6255542076083029 Con Loss: 4.838579099638928
+[2 / 20] tensor([[0.843, 0.653],
+        [0.705, 0.697]]) {'epoch': 2, 'valid/acc': 74.647, 'valid/acc_unbiased': 70.631, 'valid/diff': 14.229, 'valid/acc_skew': 75.901, 'valid/acc_align': 65.36, 'test/acc': 76.465, 'test/acc_unbiased': 72.443, 'test/diff': 9.848, 'test/acc_skew': 77.367, 'test/acc_align': 67.519}
+[2 / 20] best valid accuracy: 70.631 at epoch 2 
+ best_stats: {'best_valid_epoch': 2, 'best_valid_valid/acc': 74.647, 'best_valid_valid/acc_unbiased': 70.631, 'best_valid_valid/diff': 14.229, 'best_valid_valid/acc_skew': 75.901, 'best_valid_valid/acc_align': 65.36, 'best_valid_test/acc': 76.465, 'best_valid_test/acc_unbiased': 72.443, 'best_valid_test/diff': 9.848, 'best_valid_test/acc_skew': 77.367, 'best_valid_test/acc_align': 67.519}
+[2 / 20] best test accuracy: 72.443 at epoch 2 
+ best_stats: {'best_test_epoch': 2, 'best_test_valid/acc': 74.647, 'best_test_valid/acc_unbiased': 70.631, 'best_test_valid/diff': 14.229, 'best_test_valid/acc_skew': 75.901, 'best_test_valid/acc_align': 65.36, 'best_test_test/acc': 76.465, 'best_test_test/acc_unbiased': 72.443, 'best_test_test/diff': 9.848, 'best_test_test/acc_skew': 77.367, 'best_test_test/acc_align': 67.519}
+[3 / 20] Learning rate: 0.001 weight: 0.01
+[3 / 20] Loss: 4.81521317156378 CE Loss: 0.568323789868291 Con Loss: 4.809529942991087
+[3 / 20] tensor([[0.685, 0.494],
+        [0.854, 0.806]]) {'epoch': 3, 'valid/acc': 73.986, 'valid/acc_unbiased': 70.095, 'valid/diff': 13.856, 'valid/acc_skew': 77.023, 'valid/acc_align': 63.167, 'test/acc': 74.35, 'test/acc_unbiased': 70.977, 'test/diff': 11.917, 'test/acc_skew': 76.936, 'test/acc_align': 65.019}
+[3 / 20] best valid accuracy: 70.631 at epoch 2 
+ best_stats: {'best_valid_epoch': 2, 'best_valid_valid/acc': 74.647, 'best_valid_valid/acc_unbiased': 70.631, 'best_valid_valid/diff': 14.229, 'best_valid_valid/acc_skew': 75.901, 'best_valid_valid/acc_align': 65.36, 'best_valid_test/acc': 76.465, 'best_valid_test/acc_unbiased': 72.443, 'best_valid_test/diff': 9.848, 'best_valid_test/acc_skew': 77.367, 'best_valid_test/acc_align': 67.519}
+[3 / 20] best test accuracy: 72.443 at epoch 2 
+ best_stats: {'best_test_epoch': 2, 'best_test_valid/acc': 74.647, 'best_test_valid/acc_unbiased': 70.631, 'best_test_valid/diff': 14.229, 'best_test_valid/acc_skew': 75.901, 'best_test_valid/acc_align': 65.36, 'best_test_test/acc': 76.465, 'best_test_test/acc_unbiased': 72.443, 'best_test_test/diff': 9.848, 'best_test_test/acc_skew': 77.367, 'best_test_test/acc_align': 67.519}
+[4 / 20] Learning rate: 0.001 weight: 0.01
+[4 / 20] Loss: 4.804277046338031 CE Loss: 0.5651463243390636 Con Loss: 4.798625613475628
+[4 / 20] tensor([[0.706, 0.551],
+        [0.842, 0.715]]) {'epoch': 4, 'valid/acc': 75.0, 'valid/acc_unbiased': 71.361, 'valid/diff': 12.726, 'valid/acc_skew': 77.724, 'valid/acc_align': 64.997, 'test/acc': 74.658, 'test/acc_unbiased': 70.355, 'test/diff': 14.082, 'test/acc_skew': 77.396, 'test/acc_align': 63.314}
+[4 / 20] best valid accuracy: 71.361 at epoch 4 
+ best_stats: {'best_valid_epoch': 4, 'best_valid_valid/acc': 75.0, 'best_valid_valid/acc_unbiased': 71.361, 'best_valid_valid/diff': 12.726, 'best_valid_valid/acc_skew': 77.724, 'best_valid_valid/acc_align': 64.997, 'best_valid_test/acc': 74.658, 'best_valid_test/acc_unbiased': 70.355, 'best_valid_test/diff': 14.082, 'best_valid_test/acc_skew': 77.396, 'best_valid_test/acc_align': 63.314}
+[4 / 20] best test accuracy: 72.443 at epoch 2 
+ best_stats: {'best_test_epoch': 2, 'best_test_valid/acc': 74.647, 'best_test_valid/acc_unbiased': 70.631, 'best_test_valid/diff': 14.229, 'best_test_valid/acc_skew': 75.901, 'best_test_valid/acc_align': 65.36, 'best_test_test/acc': 76.465, 'best_test_test/acc_unbiased': 72.443, 'best_test_test/diff': 9.848, 'best_test_test/acc_skew': 77.367, 'best_test_test/acc_align': 67.519}
+[5 / 20] Learning rate: 0.001 weight: 0.01
+[5 / 20] Loss: 4.795129045970819 CE Loss: 0.5247719103192067 Con Loss: 4.789881328476156
+[5 / 20] tensor([[0.784, 0.631],
+        [0.817, 0.758]]) {'epoch': 5, 'valid/acc': 77.513, 'valid/acc_unbiased': 73.89, 'valid/diff': 11.578, 'valid/acc_skew': 79.679, 'valid/acc_align': 68.101, 'test/acc': 78.272, 'test/acc_unbiased': 74.726, 'test/diff': 10.626, 'test/acc_skew': 80.039, 'test/acc_align': 69.413}
+[5 / 20] best valid accuracy: 73.890 at epoch 5 
+ best_stats: {'best_valid_epoch': 5, 'best_valid_valid/acc': 77.513, 'best_valid_valid/acc_unbiased': 73.89, 'best_valid_valid/diff': 11.578, 'best_valid_valid/acc_skew': 79.679, 'best_valid_valid/acc_align': 68.101, 'best_valid_test/acc': 78.272, 'best_valid_test/acc_unbiased': 74.726, 'best_valid_test/diff': 10.626, 'best_valid_test/acc_skew': 80.039, 'best_valid_test/acc_align': 69.413}
+[5 / 20] best test accuracy: 74.726 at epoch 5 
+ best_stats: {'best_test_epoch': 5, 'best_test_valid/acc': 77.513, 'best_test_valid/acc_unbiased': 73.89, 'best_test_valid/diff': 11.578, 'best_test_valid/acc_skew': 79.679, 'best_test_valid/acc_align': 68.101, 'best_test_test/acc': 78.272, 'best_test_test/acc_unbiased': 74.726, 'best_test_test/diff': 10.626, 'best_test_test/acc_skew': 80.039, 'best_test_test/acc_align': 69.413}
+[6 / 20] Learning rate: 0.001 weight: 0.01
+[6 / 20] Loss: 4.777100669077506 CE Loss: 0.5181445868307881 Con Loss: 4.771919191969991
+[6 / 20] tensor([[0.977, 0.932],
+        [0.499, 0.273]]) {'epoch': 6, 'valid/acc': 72.531, 'valid/acc_unbiased': 67.387, 'valid/diff': 9.757, 'valid/acc_skew': 72.265, 'valid/acc_align': 62.508, 'test/acc': 73.997, 'test/acc_unbiased': 67.034, 'test/diff': 13.613, 'test/acc_skew': 73.84, 'test/acc_align': 60.227}
+[6 / 20] best valid accuracy: 73.890 at epoch 5 
+ best_stats: {'best_valid_epoch': 5, 'best_valid_valid/acc': 77.513, 'best_valid_valid/acc_unbiased': 73.89, 'best_valid_valid/diff': 11.578, 'best_valid_valid/acc_skew': 79.679, 'best_valid_valid/acc_align': 68.101, 'best_valid_test/acc': 78.272, 'best_valid_test/acc_unbiased': 74.726, 'best_valid_test/diff': 10.626, 'best_valid_test/acc_skew': 80.039, 'best_valid_test/acc_align': 69.413}
+[6 / 20] best test accuracy: 74.726 at epoch 5 
+ best_stats: {'best_test_epoch': 5, 'best_test_valid/acc': 77.513, 'best_test_valid/acc_unbiased': 73.89, 'best_test_valid/diff': 11.578, 'best_test_valid/acc_skew': 79.679, 'best_test_valid/acc_align': 68.101, 'best_test_test/acc': 78.272, 'best_test_test/acc_unbiased': 74.726, 'best_test_test/diff': 10.626, 'best_test_test/acc_skew': 80.039, 'best_test_test/acc_align': 69.413}
+[7 / 20] Learning rate: 0.0001 weight: 0.01
+[7 / 20] Loss: 4.774037790472279 CE Loss: 0.5021564537525757 Con Loss: 4.769016224153131
+[7 / 20] tensor([[0.851, 0.608],
+        [0.809, 0.782]]) {'epoch': 7, 'valid/acc': 79.277, 'valid/acc_unbiased': 73.984, 'valid/diff': 15.833, 'valid/acc_skew': 81.9, 'valid/acc_align': 66.068, 'test/acc': 81.093, 'test/acc_unbiased': 76.235, 'test/diff': 13.492, 'test/acc_skew': 82.981, 'test/acc_align': 69.489}
+[7 / 20] best valid accuracy: 73.984 at epoch 7 
+ best_stats: {'best_valid_epoch': 7, 'best_valid_valid/acc': 79.277, 'best_valid_valid/acc_unbiased': 73.984, 'best_valid_valid/diff': 15.833, 'best_valid_valid/acc_skew': 81.9, 'best_valid_valid/acc_align': 66.068, 'best_valid_test/acc': 81.093, 'best_valid_test/acc_unbiased': 76.235, 'best_valid_test/diff': 13.492, 'best_valid_test/acc_skew': 82.981, 'best_valid_test/acc_align': 69.489}
+[7 / 20] best test accuracy: 76.235 at epoch 7 
+ best_stats: {'best_test_epoch': 7, 'best_test_valid/acc': 79.277, 'best_test_valid/acc_unbiased': 73.984, 'best_test_valid/diff': 15.833, 'best_test_valid/acc_skew': 81.9, 'best_test_valid/acc_align': 66.068, 'best_test_test/acc': 81.093, 'best_test_test/acc_unbiased': 76.235, 'best_test_test/diff': 13.492, 'best_test_test/acc_skew': 82.981, 'best_test_test/acc_align': 69.489}
+[8 / 20] Learning rate: 0.0001 weight: 0.01
+[8 / 20] Loss: 4.739242017196711 CE Loss: 0.47702491826593946 Con Loss: 4.734471742901159
+[8 / 20] tensor([[0.856, 0.648],
+        [0.818, 0.752]]) {'epoch': 8, 'valid/acc': 79.85, 'valid/acc_unbiased': 74.47, 'valid/diff': 16.221, 'valid/acc_skew': 82.581, 'valid/acc_align': 66.359, 'test/acc': 81.754, 'test/acc_unbiased': 76.82, 'test/diff': 13.716, 'test/acc_skew': 83.678, 'test/acc_align': 69.962}
+[8 / 20] best valid accuracy: 74.470 at epoch 8 
+ best_stats: {'best_valid_epoch': 8, 'best_valid_valid/acc': 79.85, 'best_valid_valid/acc_unbiased': 74.47, 'best_valid_valid/diff': 16.221, 'best_valid_valid/acc_skew': 82.581, 'best_valid_valid/acc_align': 66.359, 'best_valid_test/acc': 81.754, 'best_valid_test/acc_unbiased': 76.82, 'best_valid_test/diff': 13.716, 'best_valid_test/acc_skew': 83.678, 'best_valid_test/acc_align': 69.962}
+[8 / 20] best test accuracy: 76.820 at epoch 8 
+ best_stats: {'best_test_epoch': 8, 'best_test_valid/acc': 79.85, 'best_test_valid/acc_unbiased': 74.47, 'best_test_valid/diff': 16.221, 'best_test_valid/acc_skew': 82.581, 'best_test_valid/acc_align': 66.359, 'best_test_test/acc': 81.754, 'best_test_test/acc_unbiased': 76.82, 'best_test_test/diff': 13.716, 'best_test_test/acc_skew': 83.678, 'best_test_test/acc_align': 69.962}
+[9 / 20] Learning rate: 0.0001 weight: 0.01
+[9 / 20] Loss: 4.7210430183503345 CE Loss: 0.47168593986790497 Con Loss: 4.716326163721837
+[9 / 20] tensor([[0.831, 0.562],
+        [0.858, 0.794]]) {'epoch': 9, 'valid/acc': 79.718, 'valid/acc_unbiased': 73.966, 'valid/diff': 18.079, 'valid/acc_skew': 83.005, 'valid/acc_align': 64.926, 'test/acc': 81.798, 'test/acc_unbiased': 76.147, 'test/diff': 16.649, 'test/acc_skew': 84.471, 'test/acc_align': 67.822}
+[9 / 20] best valid accuracy: 74.470 at epoch 8 
+ best_stats: {'best_valid_epoch': 8, 'best_valid_valid/acc': 79.85, 'best_valid_valid/acc_unbiased': 74.47, 'best_valid_valid/diff': 16.221, 'best_valid_valid/acc_skew': 82.581, 'best_valid_valid/acc_align': 66.359, 'best_valid_test/acc': 81.754, 'best_valid_test/acc_unbiased': 76.82, 'best_valid_test/diff': 13.716, 'best_valid_test/acc_skew': 83.678, 'best_valid_test/acc_align': 69.962}
+[9 / 20] best test accuracy: 76.820 at epoch 8 
+ best_stats: {'best_test_epoch': 8, 'best_test_valid/acc': 79.85, 'best_test_valid/acc_unbiased': 74.47, 'best_test_valid/diff': 16.221, 'best_test_valid/acc_skew': 82.581, 'best_test_valid/acc_align': 66.359, 'best_test_test/acc': 81.754, 'best_test_test/acc_unbiased': 76.82, 'best_test_test/diff': 13.716, 'best_test_test/acc_skew': 83.678, 'best_test_test/acc_align': 69.962}
+[10 / 20] Learning rate: 0.0001 weight: 0.01
+[10 / 20] Loss: 4.723228244271632 CE Loss: 0.44576432975065666 Con Loss: 4.7187706366778865
+[10 / 20] tensor([[0.827, 0.557],
+        [0.862, 0.818]]) {'epoch': 10, 'valid/acc': 80.291, 'valid/acc_unbiased': 74.413, 'valid/diff': 18.46, 'valid/acc_skew': 83.642, 'valid/acc_align': 65.183, 'test/acc': 81.842, 'test/acc_unbiased': 76.579, 'test/diff': 15.659, 'test/acc_skew': 84.409, 'test/acc_align': 68.75}
+[10 / 20] best valid accuracy: 74.470 at epoch 8 
+ best_stats: {'best_valid_epoch': 8, 'best_valid_valid/acc': 79.85, 'best_valid_valid/acc_unbiased': 74.47, 'best_valid_valid/diff': 16.221, 'best_valid_valid/acc_skew': 82.581, 'best_valid_valid/acc_align': 66.359, 'best_valid_test/acc': 81.754, 'best_valid_test/acc_unbiased': 76.82, 'best_valid_test/diff': 13.716, 'best_valid_test/acc_skew': 83.678, 'best_valid_test/acc_align': 69.962}
+[10 / 20] best test accuracy: 76.820 at epoch 8 
+ best_stats: {'best_test_epoch': 8, 'best_test_valid/acc': 79.85, 'best_test_valid/acc_unbiased': 74.47, 'best_test_valid/diff': 16.221, 'best_test_valid/acc_skew': 82.581, 'best_test_valid/acc_align': 66.359, 'best_test_test/acc': 81.754, 'best_test_test/acc_unbiased': 76.82, 'best_test_test/diff': 13.716, 'best_test_test/acc_skew': 83.678, 'best_test_test/acc_align': 69.962}
+[11 / 20] Learning rate: 0.0001 weight: 0.01
+[11 / 20] Loss: 4.694452653099236 CE Loss: 0.4388881635332745 Con Loss: 4.690063784797455
+[11 / 20] tensor([[0.862, 0.580],
+        [0.829, 0.800]]) {'epoch': 11, 'valid/acc': 80.952, 'valid/acc_unbiased': 75.485, 'valid/diff': 16.449, 'valid/acc_skew': 83.709, 'valid/acc_align': 67.261, 'test/acc': 82.327, 'test/acc_unbiased': 76.781, 'test/diff': 15.607, 'test/acc_skew': 84.585, 'test/acc_align': 68.977}
+[11 / 20] best valid accuracy: 75.485 at epoch 11 
+ best_stats: {'best_valid_epoch': 11, 'best_valid_valid/acc': 80.952, 'best_valid_valid/acc_unbiased': 75.485, 'best_valid_valid/diff': 16.449, 'best_valid_valid/acc_skew': 83.709, 'best_valid_valid/acc_align': 67.261, 'best_valid_test/acc': 82.327, 'best_valid_test/acc_unbiased': 76.781, 'best_valid_test/diff': 15.607, 'best_valid_test/acc_skew': 84.585, 'best_valid_test/acc_align': 68.977}
+[11 / 20] best test accuracy: 76.820 at epoch 8 
+ best_stats: {'best_test_epoch': 8, 'best_test_valid/acc': 79.85, 'best_test_valid/acc_unbiased': 74.47, 'best_test_valid/diff': 16.221, 'best_test_valid/acc_skew': 82.581, 'best_test_valid/acc_align': 66.359, 'best_test_test/acc': 81.754, 'best_test_test/acc_unbiased': 76.82, 'best_test_test/diff': 13.716, 'best_test_test/acc_skew': 83.678, 'best_test_test/acc_align': 69.962}
+[12 / 20] Learning rate: 0.0001 weight: 0.01
+[12 / 20] Loss: 4.695952093326017 CE Loss: 0.41595926989471926 Con Loss: 4.691792495050812
+[12 / 20] tensor([[0.895, 0.670],
+        [0.798, 0.770]]) {'epoch': 12, 'valid/acc': 82.143, 'valid/acc_unbiased': 77.298, 'valid/diff': 13.69, 'valid/acc_skew': 84.143, 'valid/acc_align': 70.453, 'test/acc': 83.164, 'test/acc_unbiased': 78.342, 'test/diff': 12.669, 'test/acc_skew': 84.677, 'test/acc_align': 72.008}
+[12 / 20] best valid accuracy: 77.298 at epoch 12 
+ best_stats: {'best_valid_epoch': 12, 'best_valid_valid/acc': 82.143, 'best_valid_valid/acc_unbiased': 77.298, 'best_valid_valid/diff': 13.69, 'best_valid_valid/acc_skew': 84.143, 'best_valid_valid/acc_align': 70.453, 'best_valid_test/acc': 83.164, 'best_valid_test/acc_unbiased': 78.342, 'best_valid_test/diff': 12.669, 'best_valid_test/acc_skew': 84.677, 'best_valid_test/acc_align': 72.008}
+[12 / 20] best test accuracy: 78.342 at epoch 12 
+ best_stats: {'best_test_epoch': 12, 'best_test_valid/acc': 82.143, 'best_test_valid/acc_unbiased': 77.298, 'best_test_valid/diff': 13.69, 'best_test_valid/acc_skew': 84.143, 'best_test_valid/acc_align': 70.453, 'best_test_test/acc': 83.164, 'best_test_test/acc_unbiased': 78.342, 'best_test_test/diff': 12.669, 'best_test_test/acc_skew': 84.677, 'best_test_test/acc_align': 72.008}
+[13 / 20] Learning rate: 0.0001 weight: 0.01
+[13 / 20] Loss: 4.668506347684061 CE Loss: 0.4144096155430248 Con Loss: 4.664362264287863
+[13 / 20] tensor([[0.831, 0.580],
+        [0.852, 0.842]]) {'epoch': 13, 'valid/acc': 80.688, 'valid/acc_unbiased': 74.674, 'valid/diff': 18.452, 'valid/acc_skew': 83.9, 'valid/acc_align': 65.448, 'test/acc': 82.063, 'test/acc_unbiased': 77.641, 'test/diff': 13.084, 'test/acc_skew': 84.183, 'test/acc_align': 71.098}
+[13 / 20] best valid accuracy: 77.298 at epoch 12 
+ best_stats: {'best_valid_epoch': 12, 'best_valid_valid/acc': 82.143, 'best_valid_valid/acc_unbiased': 77.298, 'best_valid_valid/diff': 13.69, 'best_valid_valid/acc_skew': 84.143, 'best_valid_valid/acc_align': 70.453, 'best_valid_test/acc': 83.164, 'best_valid_test/acc_unbiased': 78.342, 'best_valid_test/diff': 12.669, 'best_valid_test/acc_skew': 84.677, 'best_valid_test/acc_align': 72.008}
+[13 / 20] best test accuracy: 78.342 at epoch 12 
+ best_stats: {'best_test_epoch': 12, 'best_test_valid/acc': 82.143, 'best_test_valid/acc_unbiased': 77.298, 'best_test_valid/diff': 13.69, 'best_test_valid/acc_skew': 84.143, 'best_test_valid/acc_align': 70.453, 'best_test_test/acc': 83.164, 'best_test_test/acc_unbiased': 78.342, 'best_test_test/diff': 12.669, 'best_test_test/acc_skew': 84.677, 'best_test_test/acc_align': 72.008}
+[14 / 20] Learning rate: 1e-05 weight: 0.01
+[14 / 20] Loss: 4.660347375371477 CE Loss: 0.42512484019755736 Con Loss: 4.656096117754319
+[14 / 20] tensor([[0.862, 0.636],
+        [0.834, 0.824]]) {'epoch': 14, 'valid/acc': 81.349, 'valid/acc_unbiased': 75.746, 'valid/diff': 16.953, 'valid/acc_skew': 84.223, 'valid/acc_align': 67.27, 'test/acc': 83.12, 'test/acc_unbiased': 78.923, 'test/diff': 11.785, 'test/acc_skew': 84.815, 'test/acc_align': 73.03}
+[14 / 20] best valid accuracy: 77.298 at epoch 12 
+ best_stats: {'best_valid_epoch': 12, 'best_valid_valid/acc': 82.143, 'best_valid_valid/acc_unbiased': 77.298, 'best_valid_valid/diff': 13.69, 'best_valid_valid/acc_skew': 84.143, 'best_valid_valid/acc_align': 70.453, 'best_valid_test/acc': 83.164, 'best_valid_test/acc_unbiased': 78.342, 'best_valid_test/diff': 12.669, 'best_valid_test/acc_skew': 84.677, 'best_valid_test/acc_align': 72.008}
+[14 / 20] best test accuracy: 78.923 at epoch 14 
+ best_stats: {'best_test_epoch': 14, 'best_test_valid/acc': 81.349, 'best_test_valid/acc_unbiased': 75.746, 'best_test_valid/diff': 16.953, 'best_test_valid/acc_skew': 84.223, 'best_test_valid/acc_align': 67.27, 'best_test_test/acc': 83.12, 'best_test_test/acc_unbiased': 78.923, 'best_test_test/diff': 11.785, 'best_test_test/acc_skew': 84.815, 'best_test_test/acc_align': 73.03}
+[15 / 20] Learning rate: 1e-05 weight: 0.01
+[15 / 20] Loss: 4.643170158020056 CE Loss: 0.42466840473878426 Con Loss: 4.638923465988326
+[15 / 20] tensor([[0.857, 0.631],
+        [0.842, 0.824]]) {'epoch': 15, 'valid/acc': 81.305, 'valid/acc_unbiased': 75.659, 'valid/diff': 17.237, 'valid/acc_skew': 84.277, 'valid/acc_align': 67.04, 'test/acc': 83.12, 'test/acc_unbiased': 78.841, 'test/diff': 12.19, 'test/acc_skew': 84.936, 'test/acc_align': 72.746}
+[15 / 20] best valid accuracy: 77.298 at epoch 12 
+ best_stats: {'best_valid_epoch': 12, 'best_valid_valid/acc': 82.143, 'best_valid_valid/acc_unbiased': 77.298, 'best_valid_valid/diff': 13.69, 'best_valid_valid/acc_skew': 84.143, 'best_valid_valid/acc_align': 70.453, 'best_valid_test/acc': 83.164, 'best_valid_test/acc_unbiased': 78.342, 'best_valid_test/diff': 12.669, 'best_valid_test/acc_skew': 84.677, 'best_valid_test/acc_align': 72.008}
+[15 / 20] best test accuracy: 78.923 at epoch 14 
+ best_stats: {'best_test_epoch': 14, 'best_test_valid/acc': 81.349, 'best_test_valid/acc_unbiased': 75.746, 'best_test_valid/diff': 16.953, 'best_test_valid/acc_skew': 84.223, 'best_test_valid/acc_align': 67.27, 'best_test_test/acc': 83.12, 'best_test_test/acc_unbiased': 78.923, 'best_test_test/diff': 11.785, 'best_test_test/acc_skew': 84.815, 'best_test_test/acc_align': 73.03}
+[16 / 20] Learning rate: 1e-05 weight: 0.01
+[16 / 20] Loss: 4.648264169403299 CE Loss: 0.4197658665052741 Con Loss: 4.644066551621021
+[16 / 20] tensor([[0.855, 0.648],
+        [0.841, 0.812]]) {'epoch': 16, 'valid/acc': 81.481, 'valid/acc_unbiased': 75.751, 'valid/diff': 17.44, 'valid/acc_skew': 84.471, 'valid/acc_align': 67.031, 'test/acc': 83.032, 'test/acc_unbiased': 78.888, 'test/diff': 11.792, 'test/acc_skew': 84.784, 'test/acc_align': 72.992}
+[16 / 20] best valid accuracy: 77.298 at epoch 12 
+ best_stats: {'best_valid_epoch': 12, 'best_valid_valid/acc': 82.143, 'best_valid_valid/acc_unbiased': 77.298, 'best_valid_valid/diff': 13.69, 'best_valid_valid/acc_skew': 84.143, 'best_valid_valid/acc_align': 70.453, 'best_valid_test/acc': 83.164, 'best_valid_test/acc_unbiased': 78.342, 'best_valid_test/diff': 12.669, 'best_valid_test/acc_skew': 84.677, 'best_valid_test/acc_align': 72.008}
+[16 / 20] best test accuracy: 78.923 at epoch 14 
+ best_stats: {'best_test_epoch': 14, 'best_test_valid/acc': 81.349, 'best_test_valid/acc_unbiased': 75.746, 'best_test_valid/diff': 16.953, 'best_test_valid/acc_skew': 84.223, 'best_test_valid/acc_align': 67.27, 'best_test_test/acc': 83.12, 'best_test_test/acc_unbiased': 78.923, 'best_test_test/diff': 11.785, 'best_test_test/acc_skew': 84.815, 'best_test_test/acc_align': 73.03}
+[17 / 20] Learning rate: 1e-05 weight: 0.01
+[17 / 20] Loss: 4.674047723865161 CE Loss: 0.4049336314925591 Con Loss: 4.669998353191019
+[17 / 20] tensor([[0.867, 0.636],
+        [0.836, 0.812]]) {'epoch': 17, 'valid/acc': 81.922, 'valid/acc_unbiased': 76.096, 'valid/diff': 17.581, 'valid/acc_skew': 84.886, 'valid/acc_align': 67.305, 'test/acc': 83.341, 'test/acc_unbiased': 78.795, 'test/diff': 12.742, 'test/acc_skew': 85.166, 'test/acc_align': 72.424}
+[17 / 20] best valid accuracy: 77.298 at epoch 12 
+ best_stats: {'best_valid_epoch': 12, 'best_valid_valid/acc': 82.143, 'best_valid_valid/acc_unbiased': 77.298, 'best_valid_valid/diff': 13.69, 'best_valid_valid/acc_skew': 84.143, 'best_valid_valid/acc_align': 70.453, 'best_valid_test/acc': 83.164, 'best_valid_test/acc_unbiased': 78.342, 'best_valid_test/diff': 12.669, 'best_valid_test/acc_skew': 84.677, 'best_valid_test/acc_align': 72.008}
+[17 / 20] best test accuracy: 78.923 at epoch 14 
+ best_stats: {'best_test_epoch': 14, 'best_test_valid/acc': 81.349, 'best_test_valid/acc_unbiased': 75.746, 'best_test_valid/diff': 16.953, 'best_test_valid/acc_skew': 84.223, 'best_test_valid/acc_align': 67.27, 'best_test_test/acc': 83.12, 'best_test_test/acc_unbiased': 78.923, 'best_test_test/diff': 11.785, 'best_test_test/acc_skew': 84.815, 'best_test_test/acc_align': 73.03}
+[18 / 20] Learning rate: 1e-05 weight: 0.01
+[18 / 20] Loss: 4.647599428855924 CE Loss: 0.40371436456428844 Con Loss: 4.643562241573959
+[18 / 20] tensor([[0.869, 0.631],
+        [0.835, 0.812]]) {'epoch': 18, 'valid/acc': 82.099, 'valid/acc_unbiased': 76.499, 'valid/diff': 16.85, 'valid/acc_skew': 84.924, 'valid/acc_align': 68.074, 'test/acc': 83.341, 'test/acc_unbiased': 78.671, 'test/diff': 13.063, 'test/acc_skew': 85.203, 'test/acc_align': 72.14}
+[18 / 20] best valid accuracy: 77.298 at epoch 12 
+ best_stats: {'best_valid_epoch': 12, 'best_valid_valid/acc': 82.143, 'best_valid_valid/acc_unbiased': 77.298, 'best_valid_valid/diff': 13.69, 'best_valid_valid/acc_skew': 84.143, 'best_valid_valid/acc_align': 70.453, 'best_valid_test/acc': 83.164, 'best_valid_test/acc_unbiased': 78.342, 'best_valid_test/diff': 12.669, 'best_valid_test/acc_skew': 84.677, 'best_valid_test/acc_align': 72.008}
+[18 / 20] best test accuracy: 78.923 at epoch 14 
+ best_stats: {'best_test_epoch': 14, 'best_test_valid/acc': 81.349, 'best_test_valid/acc_unbiased': 75.746, 'best_test_valid/diff': 16.953, 'best_test_valid/acc_skew': 84.223, 'best_test_valid/acc_align': 67.27, 'best_test_test/acc': 83.12, 'best_test_test/acc_unbiased': 78.923, 'best_test_test/diff': 11.785, 'best_test_test/acc_skew': 84.815, 'best_test_test/acc_align': 73.03}
+[19 / 20] Learning rate: 1e-05 weight: 0.01
+[19 / 20] Loss: 4.649957350363564 CE Loss: 0.40654300158687234 Con Loss: 4.645891831538222
+[19 / 20] tensor([[0.861, 0.636],
+        [0.841, 0.812]]) {'epoch': 19, 'valid/acc': 81.922, 'valid/acc_unbiased': 76.424, 'valid/diff': 16.699, 'valid/acc_skew': 84.774, 'valid/acc_align': 68.074, 'test/acc': 83.253, 'test/acc_unbiased': 78.769, 'test/diff': 12.69, 'test/acc_skew': 85.114, 'test/acc_align': 72.424}
+[19 / 20] best valid accuracy: 77.298 at epoch 12 
+ best_stats: {'best_valid_epoch': 12, 'best_valid_valid/acc': 82.143, 'best_valid_valid/acc_unbiased': 77.298, 'best_valid_valid/diff': 13.69, 'best_valid_valid/acc_skew': 84.143, 'best_valid_valid/acc_align': 70.453, 'best_valid_test/acc': 83.164, 'best_valid_test/acc_unbiased': 78.342, 'best_valid_test/diff': 12.669, 'best_valid_test/acc_skew': 84.677, 'best_valid_test/acc_align': 72.008}
+[19 / 20] best test accuracy: 78.923 at epoch 14 
+ best_stats: {'best_test_epoch': 14, 'best_test_valid/acc': 81.349, 'best_test_valid/acc_unbiased': 75.746, 'best_test_valid/diff': 16.953, 'best_test_valid/acc_skew': 84.223, 'best_test_valid/acc_align': 67.27, 'best_test_test/acc': 83.12, 'best_test_test/acc_unbiased': 78.923, 'best_test_test/diff': 11.785, 'best_test_test/acc_skew': 84.815, 'best_test_test/acc_align': 73.03}
+[20 / 20] Learning rate: 1e-05 weight: 0.01
+[20 / 20] Loss: 4.641449585864784 CE Loss: 0.3999662000237809 Con Loss: 4.637449919235952
+[20 / 20] tensor([[0.862, 0.636],
+        [0.842, 0.824]]) {'epoch': 20, 'valid/acc': 81.834, 'valid/acc_unbiased': 75.96, 'valid/diff': 17.822, 'valid/acc_skew': 84.871, 'valid/acc_align': 67.049, 'test/acc': 83.429, 'test/acc_unbiased': 79.125, 'test/diff': 12.189, 'test/acc_skew': 85.219, 'test/acc_align': 73.03}
+[20 / 20] best valid accuracy: 77.298 at epoch 12 
+ best_stats: {'best_valid_epoch': 12, 'best_valid_valid/acc': 82.143, 'best_valid_valid/acc_unbiased': 77.298, 'best_valid_valid/diff': 13.69, 'best_valid_valid/acc_skew': 84.143, 'best_valid_valid/acc_align': 70.453, 'best_valid_test/acc': 83.164, 'best_valid_test/acc_unbiased': 78.342, 'best_valid_test/diff': 12.669, 'best_valid_test/acc_skew': 84.677, 'best_valid_test/acc_align': 72.008}
+[20 / 20] best test accuracy: 79.125 at epoch 20 
+ best_stats: {'best_test_epoch': 20, 'best_test_valid/acc': 81.834, 'best_test_valid/acc_unbiased': 75.96, 'best_test_valid/diff': 17.822, 'best_test_valid/acc_skew': 84.871, 'best_test_valid/acc_align': 67.049, 'best_test_test/acc': 83.429, 'best_test_test/acc_unbiased': 79.125, 'best_test_test/diff': 12.189, 'best_test_test/acc_skew': 85.219, 'best_test_test/acc_align': 73.03}
+Total training time: 0:10:56
