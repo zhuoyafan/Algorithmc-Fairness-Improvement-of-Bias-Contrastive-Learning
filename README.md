@@ -1,6 +1,6 @@
 # Algorithmc Fairness Improvement of Bias-Contrastive Learning
 
-The code mainly builds on [the pytorch implementation](https://github.com/mqraitem/Bias-Mimicking) of [Bias Mimicking: A simple sampling approach for Bias Mitigation](https://arxiv.org/pdf/2209.15605.pdf) with some small changes.
+The code mainly builds on [the official pytorch implementation](https://github.com/mqraitem/Bias-Mimicking) of [Bias Mimicking: A simple sampling approach for Bias Mitigation](https://arxiv.org/pdf/2209.15605.pdf) with some small changes.
 
 ## Setup
 
