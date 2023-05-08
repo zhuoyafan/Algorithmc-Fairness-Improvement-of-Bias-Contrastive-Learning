@@ -42,6 +42,6 @@ where mode refers to whether the distribution is left as is/undersampled/upweigh
 
 ## Reference
 
-Qraitem M, Saenko K, Plummer B A. Bias Mimicking: A Simple Sampling Approach for Bias Mitigation[J]. arXiv preprint arXiv:2209.15605, 2022.[paper](https://arxiv.org/pdf/2209.15605.pdf)[code](https://github.com/mqraitem/Bias-Mimicking)
+[1] Qraitem M, Saenko K, Plummer B A. Bias Mimicking: A Simple Sampling Approach for Bias Mitigation[J]. arXiv preprint arXiv:2209.15605, 2022.[[paper](https://arxiv.org/pdf/2209.15605.pdf)][[code](https://github.com/mqraitem/Bias-Mimicking)]
 
-https://github.com/grayhong/bias-contrastive-learning
+[2] Hong Y, Yang E. Unbiased classification through bias-contrastive and bias-balanced learning[J]. Advances in Neural Information Processing Systems, 2021, 34: 26449-26461.[[paper](https://proceedings.neurips.cc/paper_files/paper/2021/file/de8aa43e5d5fa8536cf23e54244476fa-Paper.pdf)][[code](https://github.com/grayhong/bias-contrastive-learning)]
