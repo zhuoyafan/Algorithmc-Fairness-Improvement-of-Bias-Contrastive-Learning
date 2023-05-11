@@ -60,8 +60,8 @@ class BiasedCifar10(SamplingDataset):
             logging.info("Distribution After Sampling: ")
             self.print_new_distro()
 
-        if not under_sample: 
-          self.confusion_matrix_org, self.confusion_matrix, self.confusion_matrix_by = get_confusion_matrix(
+        #if not under_sample: 
+        self.confusion_matrix_org, self.confusion_matrix, self.confusion_matrix_by = get_confusion_matrix(
                 num_classes=10,
                 targets=self.targets,
                 biases=self.bias_targets)
@@ -205,10 +205,12 @@ def get_cifar10(root, split, num_workers=2, batch_size=128,
                                             transforms.ToPILImage(), 
                                             transforms.RandomCrop(32, padding=4),
                                             transforms.RandomHorizontalFlip(),
-                                            transforms.RandomRotation(20),
-                                            transforms.RandomApply([
-                                            transforms.ColorJitter(0.4, 0.4, 0.4, 0.1)
-                                            ], p=0.8),
+                                            # trivial augment
+                                            transforms.TrivialAugmentWide(),
+                                            #transforms.RandomRotation(20),
+                                            #transforms.RandomApply([
+                                            #transforms.ColorJitter(0.4, 0.4, 0.4, 0.1)
+                                            #], p=0.8),
                                             transforms.ToTensor(),
                                             transforms.Normalize(mean, std)])
         else: 

@@ -157,7 +157,7 @@ class SamplingDataset:
                 self.groups_idx == group_idx
             ]
             subsampled_indices = list(subsampled_indices.numpy())
-            subsampled_indices = random.choices(subsampled_indices, k=int(max_count*0.9))
+            subsampled_indices = random.choices(subsampled_indices, k=int(max_count))
             to_keep_idx.extend(subsampled_indices)
 
         self.set_to_keep(to_keep_idx)
